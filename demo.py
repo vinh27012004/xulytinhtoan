@@ -4,7 +4,7 @@
 
 import sys
 
-from calculator import cong, tru, nhan
+from calculator import cong, tru, nhan, chia, luy_thua
 
 # Đảm bảo in được tiếng Việt trên terminal Windows (cp1252)
 sys.stdout.reconfigure(encoding="utf-8")
@@ -26,9 +26,16 @@ def main():
     a, b = fmt(a), fmt(b)
 
     print(f"Hai số: a = {a}, b = {b}\n")
-    print(f"Cộng:  {a} + {b} = {fmt(cong(a, b))}")
-    print(f"Trừ:   {a} - {b} = {fmt(tru(a, b))}")
-    print(f"Nhân:  {a} × {b} = {fmt(nhan(a, b))}")
+    print(f"Cộng:     {a} + {b} = {fmt(cong(a, b))}")
+    print(f"Trừ:      {a} - {b} = {fmt(tru(a, b))}")
+    print(f"Nhân:     {a} × {b} = {fmt(nhan(a, b))}")
+
+    if b == 0:
+        print(f"Chia:     {a} ÷ {b} = không thể chia cho 0")
+    else:
+        print(f"Chia:     {a} ÷ {b} = {fmt(chia(a, b))}")
+
+    print(f"Lũy thừa: {a} ^ {b} = {fmt(luy_thua(a, b))}")
 
 
 if __name__ == "__main__":
