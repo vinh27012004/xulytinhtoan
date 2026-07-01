@@ -11,6 +11,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 
 def main():
+    print ("Dũng AV - Demo các phép tính cơ bản\n")
     args = sys.argv[1:]
     try:
         a = float(args[0]) if len(args) > 0 else 12
